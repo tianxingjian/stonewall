@@ -1,0 +1,223 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html,body {
+	min-height: 100%;
+	position: relative;
+	min-width: 760px;
+}
+
+div #header {
+	font-size: 30px;
+	height: 150px;
+	width: 100%;
+	margin: auto;
+	background-color: #FFFFFF;
+	/* For WebKit (Safari, Chrome, etc) */
+	background: #FFFFFF
+		-webkit-gradient(linear, left top, left bottom, from(#54A4C5),
+		to(#FFFFFF) ) no-repeat;
+	/* Mozilla,Firefox/Gecko */
+	background: #FFFFFF -moz-linear-gradient(top, #54A4C5, #FFFFFF)
+		no-repeat;
+	/* IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#54A4C5,
+		endColorstr=#FFFFFF ) no-repeat;
+	/* IE 8 */
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.gradient(startColorstr=#54A4C5, endColorstr=#54A4C5)"
+		no-repeat;
+}
+
+div #content {
+	width: 100%;
+	float: left;
+}
+
+div #menu {
+	text-indent: 20px;
+	padding-bottom: 20px;
+	margin: auto;
+}
+
+div #main {
+	clear: top;
+	position: relative;
+	margin: auto;
+	width: 80%;
+}
+
+.sucess,.failed {
+	border: 1px solid;
+	margin: 10px 0px;
+	padding: 15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+
+.sucess {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+}
+
+.failed {
+	color: #D8000C;
+	background-color: #FFBABA;
+}
+
+div.display_images {
+	margin: auto;
+}
+
+div .display_images img {
+	width: 400px;
+	padding: 20px;
+}
+
+div.image_desc {
+	width: 500px;
+}
+
+div.image_desc p {
+	width: 500px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+div.displayJob,div.displayCategorie,div.displayFaq {
+	padding-bottom: 20px;
+}
+
+div.displayCategorie div label,div.displayFaq div label {
+	padding-left: 20px;
+}
+
+img#delete_image {
+	width: 20px;
+	padding: 0px;
+	vertical-align: top;
+}
+
+label.inline-block {
+	width: 150px;
+	display: inline-block;
+}
+
+div.addLandscapingJob {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+div.addLandscapingJob p {
+	padding-bottom: 0px;
+}
+
+div.addLandscapingJob input.marginLeft {
+	margin-left: 150px;
+}
+
+div.image_desc img {
+	padding-top: 0px;
+}
+
+div.image_desc:nth-child(even) {
+	float: right;
+}
+
+div.image_desc:nth-child(odd) {
+	float: left;
+}
+
+div.contact {
+	padding: 20px;
+}
+
+div.contact div {
+	padding: 5px;
+}
+
+div.contact label {
+	display: inline-block;
+	width: 100px;
+}
+
+div.contact input {
+	width: 200px;
+}
+
+div.contact textarea {
+	border: 1px solid;
+	width: 400px;
+	height: 100px;
+}
+
+div.submit input {
+	margin-left: 300px;
+}
+
+#footer {
+	height: 120px;
+	clear: both;
+	min-width: 600px;
+	background-color: white;
+	margin: auto;
+	width: 80%;
+	margin-top: 20px;
+}
+
+.outline {
+	padding: 20px;
+	border-width: thick;
+	border-style: solid;
+	border-radius: 20px;
+	border-style: solid;
+	border-color: green;
+	border-width: thick;
+}
+
+#menu ul {
+	list-style-type: none;
+	border: 0px;
+	padding: 0px;
+	list-style: none outside none;
+	overflow: visible;
+	white-space: nowrap;
+}
+
+#menu ul li {
+	padding-top: 3px;
+	display: inline;
+	padding: 15px;
+	margin-right: 4px;
+	font-style: italic;
+	font-size: 20px;
+	text-align: left;
+}
+
+#menu ul li.loginLink {
+	text-align: right;
+}
+
+td.content_td {
+	vertical-align: top;
+}
+
+h1#heading {
+	padding-top: 25px;
+	text-align: center;
+}
+
+p {
+	padding-bottom: 10px;
+}
+
+input {
+	border: 1px solid;
+}
+
+font.WARN {
+	color: red;
+}

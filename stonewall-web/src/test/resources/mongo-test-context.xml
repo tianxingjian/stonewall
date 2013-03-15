@@ -6,15 +6,11 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-
-	<mongo:db-factory host="localhost" port="27017"
-		dbname="stonewallTest" />
-
 	<!-- mongod -dbpath mongodb <dash><dash>rest -->
 	<context:annotation-config />
-	
+
 	<mongo:repositories base-package="com.stonewall.web.dao" />
-	
+
 	<context:component-scan base-package="com.stonewall.web.dao" />
 
 	<!-- To translate any MongoExceptions thrown in @Repository annotated classes -->
@@ -23,16 +19,25 @@
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg ref="mongoDbFactory" />
 	</bean>
-	
+
 	<mongo:mapping-converter id="converter"
 		db-factory-ref="mongoDbFactory" />
-		
+
 	<!-- MongoDB GridFS Template -->
 	<bean id="gridTemplate" class="org.springframework.data.mongodb.gridfs.GridFsTemplate">
 		<constructor-arg ref="mongoDbFactory" />
 		<constructor-arg ref="converter" />
 	</bean>
-	
-	<bean class="com.stonewall.web.mock.MockResourceUtils"/>
+
+	<bean class="com.stonewall.web.mock.MockResourceUtils" />
+
+	<beans profile="cloudbees">
+		<mongo:db-factory
+			uri="mongodb://yodes:reloaded@linus.mongohq.com:10045/Jsw6qTypcBWxfAZFbc6w" />
+	</beans>
+	<beans profile="default">
+		<mongo:db-factory host="localhost" port="27017"
+			dbname="stonewallTest" />
+	</beans>
 
 </beans>

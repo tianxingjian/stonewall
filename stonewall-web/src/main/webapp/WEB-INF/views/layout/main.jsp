@@ -6,7 +6,7 @@
 		<title><tiles:insertAttribute name="title" ignore="true" /></title>
 		<link rel="stylesheet" href="<c:url value="/styles/main.css" />"
 			type="text/css">
-		<script type="text/javascript" src="<c:url value="/styles/jquery-1.8.3.js" />"></script>
+		<script type="text/javascript" src="<c:url value="/styles/jquery-1.9.1.min.js" />"></script>
 	</head>
 	<body>
 		<script type="text/javascript">

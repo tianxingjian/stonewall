@@ -11,7 +11,6 @@ public class PlantRetreiverTest {
 		String result = plantRetreiver.getPlantInfo();
 		System.out.println(result);
 	}
-	
 
 	@Test
 	public void testGson() {

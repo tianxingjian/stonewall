@@ -6,7 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.stonewall.web.model.Plant;
 
-
 public interface PlantRepository extends CrudRepository<Plant, String> {
 
 	/**

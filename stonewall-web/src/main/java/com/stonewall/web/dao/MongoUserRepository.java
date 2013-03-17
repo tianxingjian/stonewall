@@ -6,7 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.stonewall.web.model.MongoUser;
 
-
 public interface MongoUserRepository extends CrudRepository<MongoUser, String> {
 
 	/**

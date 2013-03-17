@@ -42,7 +42,6 @@ public class MongoUserDetailsService implements UserDetailsService, Initializing
 		try {
 			logger.info("Checking for admin user yoda");
 			if (userRepository.findByUsername("yoda") == null) {
-				// TODO possible mongoDB bug. add test
 				logger.warn("Adding admin user yoda");
 				List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
 				roles.add(new SimpleGrantedAuthority("ROLE_ADMIN"));

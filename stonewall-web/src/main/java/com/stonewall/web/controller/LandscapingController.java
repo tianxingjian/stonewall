@@ -76,7 +76,8 @@ public class LandscapingController implements InitializingBean {
 	}
 
 	@RequestMapping(value = "addphoto", method = RequestMethod.POST)
-	public String addPicture(ModelMap model, @RequestParam("id") String id, @RequestParam("picture") MultipartFile picture) {
+	public String addPicture(ModelMap model, @RequestParam("id") String id,
+			@RequestParam("picture") MultipartFile picture) {
 		logger.debug("Received add photo request for id:" + id);
 		LandscapingJob job = landscapingRepo.findById(id);
 		if (job != null && !picture.isEmpty()) {
@@ -89,7 +90,8 @@ public class LandscapingController implements InitializingBean {
 	}
 
 	@RequestMapping(method = RequestMethod.PUT)
-	public void updateLandscaping(ModelMap model, @RequestParam("id") String id, @RequestParam("name") String name, @RequestParam("description") String description) {
+	public void updateLandscaping(ModelMap model, @RequestParam("id") String id, @RequestParam("name") String name,
+			@RequestParam("description") String description) {
 		logger.debug("Updating landscape with id:" + id);
 		LandscapingJob job = landscapingRepo.findById(id);
 		if (job != null) {

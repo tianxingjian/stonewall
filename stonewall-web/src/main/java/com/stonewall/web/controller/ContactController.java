@@ -36,8 +36,10 @@ public class ContactController implements InitializingBean {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public void contact(@RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("phoneNumber") String phoneNumber, @RequestParam("message") String message, Model model) {
-		EmailMessage contactMessage = new EmailMessage("Stonewall Garden Centre", message + "\n Phone Number : " + phoneNumber, name, email);
+	public void contact(@RequestParam("name") String name, @RequestParam("email") String email,
+			@RequestParam("phoneNumber") String phoneNumber, @RequestParam("message") String message, Model model) {
+		EmailMessage contactMessage = new EmailMessage("Stonewall Garden Centre", message + "\n Phone Number : "
+				+ phoneNumber, name, email);
 		logger.debug(contactMessage.toString());
 		StatusResponse response = emailService.send(contactMessage);
 		model.addAttribute("response", response);

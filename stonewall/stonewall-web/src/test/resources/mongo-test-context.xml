@@ -33,7 +33,7 @@
 
 	<beans profile="cloudbees">
 		<mongo:db-factory
-			uri="mongodb://yodes:reloaded@linus.mongohq.com:10045/Jsw6qTypcBWxfAZFbc6w" />
+			uri="mongodb://cloudbees:4de7fb8fb33786acc9a3784792504dad@linus.mongohq.com:10045/Jsw6qTypcBWxfAZFbc6w" />
 	</beans>
 	<beans profile="default">
 		<mongo:db-factory host="localhost" port="27017"

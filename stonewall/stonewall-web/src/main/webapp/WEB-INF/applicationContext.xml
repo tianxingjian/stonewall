@@ -17,6 +17,10 @@
 			host="${mongo.host}" port="27017" username="${mongo.username}"
 			password="${mongo.password}" />
 	</beans>
+	<beans profile="cloudbees">
+		<mongo:db-factory
+			uri="mongodb://yodes:reloaded@linus.mongohq.com:10045/Jsw6qTypcBWxfAZFbc6w" />
+	</beans>
 	<beans profile="default">
 		<mongo:db-factory host="localhost" port="27017"
 			dbname="stonewall" />
